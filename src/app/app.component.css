@@ -1,0 +1,46 @@
+.container {
+  width: 100%;
+  background-color: rgb(16, 16, 205);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 28px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container .title {
+  font-size: 28px;
+  margin: auto 0;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.post-task {
+  color: white;
+  font-weight: 500;
+  transition: transform 0,2 ease, color 0.2 ease;
+  cursor: pointer;
+  padding: 0 6px;
+}
+
+.logout {
+  color: white;
+  font-weight: 500;
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  padding: 0 6px;
+}
+
+.post-task:hover {
+  transform: scale(1.1);
+}
+
+.logout:hover {
+  transform: scale(1.1);
+}

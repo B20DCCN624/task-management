@@ -1,0 +1,108 @@
+.container {
+  width: 96%;
+  margin: 0 auto;
+}
+
+.search-item {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.search {
+  width: 30%;
+  padding: 6px 12px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #DDDDDD;
+}
+
+.task-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.card h3 {
+  color: #007bff;
+  margin-top: 0;
+  height: 120px;
+  max-height: 200px;
+}
+.description {
+  margin: 10px 0;
+  height: 100px;
+  max-height: 200px;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  padding-top: 10px;
+}
+
+.card .priority, .card .status {
+  font-weight: bold;
+}
+.card .priority {
+  color: red;
+}
+.card .status {
+  color: orange;
+}
+.card .actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.card .actions i {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 20px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.actions i:hover {
+  transform: scale(1.2);
+}
+.actions button {
+  background-color: white;
+  border: none;
+}
+
+.icon-eye {
+  color: #007bff;
+}
+
+.icon-pen {
+  color: rgb(3, 3, 3);
+}
+
+.icon-trash {
+  color: red;
+}
+
+@media(max-width: 1200px) {
+  .task-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 768px) {
+  .task-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+

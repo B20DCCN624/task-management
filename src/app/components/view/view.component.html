@@ -1,0 +1,48 @@
+<div class="container">
+  <h2>Thông tin chi tiết</h2>
+  <div class="content-item">
+    <h3>{{ formData.title }}</h3>
+    <p class="description">{{ formData.description }}</p>
+    <div class="info">
+      <div>
+        <p>
+          Due Date: <span>{{ formData.date }}</span>
+        </p>
+        <p>
+          Priority: <span class="priority">{{ formData.priority }}</span>
+        </p>
+      </div>
+      <div>
+        <p>
+          Employee: <span>{{ formData.employee }}</span>
+        </p>
+        <p>Status: <span class="status">PENDING</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <p>Publish Your Comment</p>
+    <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+      <textarea id="comment" [(ngModel)]="formComment.comment" class="form-control" formControlName="comment"></textarea>
+      <button type="submit" class="btn-comment" [disabled]="commentForm.invalid">Publish Comment</button>
+    </form>
+  </div>
+
+  <div class="content-comment">
+    <h3>Comments</h3>
+    <div class="detail-comment" *ngFor="let item of allComment">
+      <div class="content-title">
+        <div>
+          <img src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" alt=""/>
+        </div>
+        <div>
+          <p class="name">Admin</p>
+          <p class="time">9:53 AM</p>
+        </div>
+      </div>
+      <p class="cmt">{{ item.comment }}</p>
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+</div>
