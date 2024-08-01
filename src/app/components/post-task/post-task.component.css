@@ -63,7 +63,7 @@ button.btn-post {
 }
 
 .btn-post:disabled {
-  background-color: #555;
+  background-color: #c3c3c3;
 }
 .error-message {
   color: red;

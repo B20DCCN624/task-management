@@ -29,24 +29,21 @@ export class PostTaskComponent {
     title: new FormControl('', [Validators.required]),
     description: new FormControl('', [Validators.required]),
     date: new FormControl([Validators.required]),
-    priority: new FormControl(''),
-    employee: new FormControl('', [Validators.required])
+    status: new FormControl('')
   })
 
   //getter
   get title() { return this.postForm.get('title'); }
   get description() { return this.postForm.get('description'); }
   get date() { return this.postForm.get('date'); }
-  get priority() { return this.postForm.get('priority'); }
-  get employee() { return this.postForm.get('employee'); }
+  get status() { return this.postForm.get('status'); }
 
   formData: Task = {
     id: 0,
     title: '',
     description: '',
     date: new Date(),
-    priority: '',
-    employee: ''
+    status: ''
   };
 
   onSubmit() {

@@ -3,6 +3,5 @@ export interface Task {
   title: string,
   description: string,
   date: Date,
-  priority: string,
-  employee: string,
+  status: string,
 }

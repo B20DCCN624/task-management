@@ -1,108 +1,163 @@
 .container {
-  width: 96%;
-  margin: 0 auto;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.dashboard {
+  margin: 30px 0;
+}
+
+.dashboard h3 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.pie-chart {
+  display: flex;
+  justify-content: center;
+}
+
+.task h3 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .search-item {
-  margin: 30px auto;
+  margin: 20px auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .search {
-  width: 30%;
   padding: 6px 12px;
   border-radius: 10px;
   outline: none;
   border: 1px solid #DDDDDD;
 }
-
 .task-card {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 25px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
 }
 
 .card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  text-align: left;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-.card h3 {
-  color: #007bff;
-  margin-top: 0;
-  height: 120px;
-  max-height: 200px;
-}
-.description {
-  margin: 10px 0;
-  height: 100px;
-  max-height: 200px;
-}
-.info {
+  background-color: rgb(246, 246, 246);
+  padding: 16px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   display: flex;
+  margin-bottom: 16px;
   justify-content: space-between;
-  margin-bottom: 10px;
-  border-top: 1px solid #DDDDDD;
-  border-bottom: 1px solid #DDDDDD;
-  padding-top: 10px;
-}
-
-.card .priority, .card .status {
-  font-weight: bold;
-}
-.card .priority {
-  color: red;
-}
-.card .status {
-  color: orange;
-}
-.card .actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
-}
-
-.card .actions i {
-  font-size: 20px;
+  align-items: center;
   cursor: pointer;
-  padding: 0 20px;
-  transition: transform 0.2s ease, color 0.2s ease;
+  width: 96%;
+  margin-right: 10px;
 }
 
-.actions i:hover {
-  transform: scale(1.2);
+.due-date, .title, .status, .icon-trash {
+  margin: 0 !important;
 }
-.actions button {
-  background-color: white;
-  border: none;
+
+.card:hover {
+  background-color: rgb(232, 232, 232);
+}
+
+.due-date {
+  color: rgb(168, 168, 168);
+  font-size: 14px;
+  font-weight: 500;
+}
+.status{
+  color: rgb(168, 168, 168);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon-trash {
+  color: rgb(255, 50, 50);
+  font-size: 20px;
+  padding: 4px;
 }
 
 .icon-eye {
-  color: #007bff;
+  color: rgb(152, 152, 255);
+  font-size: 20px;
+  padding: 4px;
 }
 
-.icon-pen {
-  color: rgb(3, 3, 3);
+.title {
+  margin: 0;
+  color: black;
+  font-weight: 500;
 }
 
-.icon-trash {
+.btn-add {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(255, 52, 86);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.title, .description, .due-date, .status {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.input, .form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+input[type="text"], input[type="date"], select {
+  font-size: 16px;
+}
+
+select {
+  border-radius: 6px;
+  padding: 4px 16px;
+  outline: none;
+}
+
+.error-message {
   color: red;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 5px;
+  display: flex;
 }
 
-@media(max-width: 1200px) {
-  .task-card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media(max-width: 768px) {
-  .task-card {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
+.error-message::before {
+  content: "⚠ ";
+  margin-right: 5px;
 }
 

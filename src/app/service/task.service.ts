@@ -36,6 +36,10 @@ export class TaskService {
     return this.httpClient.get<Task[]>(`http://localhost:8080/searchByName?title=${title}`);
   }
 
+  getTaskCount() {
+    return this.httpClient.get<Task>('http://localhost:8080/taskCountsByStatus');
+  }
+
   //Comment
   getAllComment() {
     return this.httpClient.get<Comment[]>('http://localhost:8080/comment');

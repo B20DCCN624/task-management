@@ -37,8 +37,7 @@ export class ViewComponent implements OnInit{
     title: '',
     description: '',
     date: new Date(),
-    priority: '',
-    employee: ''
+    status: '',
   };
 
   formComment: Comment = {

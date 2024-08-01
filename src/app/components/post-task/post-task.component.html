@@ -25,21 +25,12 @@
         <div *ngIf="date?.errors?.['required']" class="error-message">Date khong duoc de trong</div>
       </div>
     </div>
-    <div class="priority">
-      <label for="priority">Select the priority*:</label>
-      <select name="priority" id="priority" formControlName="priority">
-        <option value="low" [selected]="true">LOW</option>
-        <option value="medium">MEDIUM</option>
-        <option value="high">HIGH</option>
+    <div class="status">
+      <label for="status">Select the status*:</label>
+      <select name="status" id="status" [(ngModel)]="formData.status" formControlName="status">
+        <option value="Pending">Pending</option>
+        <option value="Done">Done</option>
       </select>
-    </div>
-    <div class="employee">
-      <label for="employee">Select employee</label>
-      <input type="text" id="employee" [(ngModel)]="formData.employee" class="form-control" formControlName="employee">
-
-      <div *ngIf="employee?.invalid && (employee?.dirty || employee?.touched)">
-        <div *ngIf="employee?.errors?.['required']" class="error-message">Employee khong duoc de trong</div>
-      </div>
     </div>
 
     <button class="btn-post" type="submit" [disabled]="postForm.invalid">Post Task</button>
