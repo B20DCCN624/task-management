@@ -1,0 +1,19 @@
+<div class="container">
+  <nz-calendar>
+    <ul *nzDateCell="let date" class="events">
+      <ng-container *ngIf="listDataMap[formatDateKey(date)]">
+        <li *ngFor="let item of listDataMap[formatDateKey(date)]">
+          <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
+        </li>
+      </ng-container>
+    </ul>
+    <ng-container *nzMonthCell="let month">
+      @if (getMonthData(month); as monthData) {
+        <div class="notes-month">
+          <section>{{ monthData }}</section>
+          <span>Backlog number</span>
+        </div>
+      }
+    </ng-container>
+  </nz-calendar>
+</div>
